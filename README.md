@@ -36,7 +36,7 @@ You can contribute translation [here](https://lsposed.crowdin.com/lspatch).
 - [LSPosed](https://github.com/LSPosed/LSPosed): Core framework
 - [Xpatch](https://github.com/WindySha/Xpatch): Fork source
 - [Apkzlib](https://android.googlesource.com/platform/tools/apkzlib): Repacking tool
+ 
+## License 
 
-## License
-
-NPatch is licensed under the **GNU General Public License v3 (GPL-3)** (http://www.gnu.org/copyleft/gpl.html).
+NPatch is licensed under the **GNU General Public License v3 (GPL-3)** (http://www.gnu.org/copyleft/gpl.html). 
