@@ -42,11 +42,11 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = "21"
+        jvmTarget = "18"
     }
 
     kotlin {
-        jvmToolchain(18)
+        jvmToolchain(21)
     }
 
     buildFeatures {
