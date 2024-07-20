@@ -68,6 +68,11 @@ public class LocalApplicationService extends ILSPApplicationService.Stub {
     }
 
     @Override
+    public int requestCLIBinder(String sPid, out List<IBinder> binder){
+        return 0;
+    }
+
+    @Override
     public List<Module> getModulesList() {
         return new ArrayList<>();
     }

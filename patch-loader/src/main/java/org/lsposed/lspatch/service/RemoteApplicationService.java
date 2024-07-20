@@ -88,6 +88,11 @@ public class RemoteApplicationService implements ILSPApplicationService {
         return null;
     }
 
+    @Override
+    public int requestCLIBinder(String sPid, out List<IBinder> binder){
+        return 0;
+    }
+
 
     @Override
     public List<Module> getLegacyModulesList() throws RemoteException {
