@@ -84,6 +84,12 @@ public class RemoteApplicationService implements ILSPApplicationService {
     }
 
     @Override
+    public IBinder requestModuleBinder(String name){
+        return null;
+    }
+
+
+    @Override
     public List<Module> getLegacyModulesList() throws RemoteException {
         return service == null ? new ArrayList<>() : service.getLegacyModulesList();
     }

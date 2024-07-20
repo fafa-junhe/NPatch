@@ -63,6 +63,11 @@ public class LocalApplicationService extends ILSPApplicationService.Stub {
     }
 
     @Override
+    public IBinder requestModuleBinder(String name){
+        return null;
+    }
+
+    @Override
     public List<Module> getModulesList() {
         return new ArrayList<>();
     }
