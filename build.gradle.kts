@@ -189,42 +189,7 @@ fun Project.configureBaseExtension() {
         checkReleaseBuilds = false
     }
 
-    extensions.findByType(ApplicationAndroidComponentsExtension::class)?.let { androidComponents ->
-        val optimizeReleaseRes = task("optimizeReleaseRes").doLast {
-            val aapt2 = File(
-                androidComponents.sdkComponents.sdkDirectory.get().asFile,
-                "build-tools/${androidBuildToolsVersion}/aapt2"
-            )
-            val zip = java.nio.file.Paths.get(
-                project.buildDir.path,
-                "intermediates",
-                "optimized_processed_res",
-                "release",
-                "resources-release-optimize.ap_"
-            )
-            val optimized = File("${zip}.opt")
-            val cmd = exec {
-                commandLine(
-                    aapt2, "optimize",
-                    "--collapse-resource-names",
-                    "--enable-sparse-encoding",
-                    "-o", optimized,
-                    zip
-                )
-                isIgnoreExitValue = false
-            }
-            if (cmd.exitValue == 0) {
-                delete(zip)
-                optimized.renameTo(zip.toFile())
-            }
-        }
-
-        tasks.configureEach {
-            if (name == "optimizeReleaseResources") {
-                finalizedBy(optimizeReleaseRes)
-            }
-        }
-    }
+    
 }
 
 subprojects {
