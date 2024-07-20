@@ -89,7 +89,7 @@ public class RemoteApplicationService implements ILSPApplicationService {
     }
 
     @Override
-    public int requestCLIBinder(String sPid, out List<IBinder> binder){
+    public int requestCLIBinder(String sPid, List<IBinder> binder){
         return 0;
     }
 
