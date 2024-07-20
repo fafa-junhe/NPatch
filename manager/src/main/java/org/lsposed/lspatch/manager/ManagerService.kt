@@ -35,4 +35,13 @@ object ManagerService : ILSPApplicationService.Stub() {
     override fun requestInjectedManagerBinder(binder: List<IBinder>?): ParcelFileDescriptor? {
         return null
     }
+
+    override fun requestModuleBinder(name: String?): IBinder? {
+        return null
+    }
+
+    override fun requestCLIBinder(sPid: String?, binder: List<IBinder>?): Int {
+        return 0
+    }
+
 }
